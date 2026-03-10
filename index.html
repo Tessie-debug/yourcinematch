@@ -28,12 +28,12 @@ main{display:grid;grid-template-columns:340px 1fr;min-height:calc(100vh - 200px)
 label{display:block;font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}
 input[type=range]{-webkit-appearance:none;width:100%;height:2px;background:var(--border);border-radius:2px;outline:none;margin-top:4px}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;height:15px;border-radius:50%;background:var(--gold);cursor:pointer;box-shadow:0 0 8px rgba(201,168,76,.5)}
-.age-big{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:var(--white);margin-top:6px}
+.age-big{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:700;color:var(--FFFFFF);margin-top:6px}
 .gtoggle{display:flex;gap:7px}
 .gbtn{flex:1;padding:9px 6px;background:transparent;border:1px solid var(--border);color:var(--muted);font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.08em;cursor:pointer;transition:all .2s;text-transform:uppercase}
 .gbtn:hover{border-color:var(--gold);color:var(--gold)}
 .gbtn.active{background:var(--gold);border-color:var(--gold);color:#000;font-weight:500}
-select{width:100%;padding:9px 13px;background:var(--surface);border:1px solid var(--border);color:var(--text);font-family:'DM Sans',sans-serif;font-size:.82rem;appearance:none;cursor:pointer;transition:border-color .2s;outline:none}
+select{width:100%;padding:9px 13px;background:var(--surface);border:1px solid var(--border);color:var(--text);font-family:'Times New Roman',sans-serif;font-size:.82rem;appearance:none;cursor:pointer;transition:border-color .2s;outline:none}
 select:focus{border-color:var(--gold)}
 .sw{position:relative}
 .sw::after{content:'▾';position:absolute;right:11px;top:50%;transform:translateY(-50%);color:var(--gold);pointer-events:none;font-size:.75rem}
@@ -233,7 +233,7 @@ function run(){
     document.getElementById('rc').style.display='block';
     const gl=selGender==='any'?'':selGender==='M'?'male ':'female ';
     document.getElementById('rtit').textContent='Top 5 Picks For You';
-    document.getElementById('rsub').textContent=`Based on ${peers.size.toLocaleString()} similar ${gl}${occ==='any'?'':occ+' '}users · Age ~${age}`;
+    document.getElementById('rsub').textContent=`Based on ${peers.size.toLocaleString()} similar ${gl}${occ==='any'?'':occ+' '}users · Age ~$ {age}`;
     const avgR=(recs.reduce((s,r)=>s+r.pAvg,0)/recs.length).toFixed(2);
     document.getElementById('sbar').innerHTML=`
       <div><span class="sv">${peers.size.toLocaleString()}</span><br><span class="sl">Peer Users</span></div>
