@@ -233,7 +233,7 @@ function run(){
     document.getElementById('rc').style.display='block';
     const gl=selGender==='any'?'':selGender==='M'?'male ':'female ';
     document.getElementById('rtit').textContent='Top 5 Picks For You';
-    document.getElementById('rsub').textContent=`Based on ${peers.size.toLocaleString()} similar ${gl}${occ==='any'?'':occ+' '}users · Age ~$ {age}`;
+    document.getElementById('rsub').textContent=`Based on ${peers.size.toLocaleString()} similar ${gl}${occ==='any'?'':occ+' '}users · Age ~${age}`;
     const avgR=(recs.reduce((s,r)=>s+r.pAvg,0)/recs.length).toFixed(2);
     document.getElementById('sbar').innerHTML=`
       <div><span class="sv">${peers.size.toLocaleString()}</span><br><span class="sl">Peer Users</span></div>
